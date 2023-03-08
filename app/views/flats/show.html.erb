@@ -1,0 +1,33 @@
+<div class="container">
+
+<div class="card w-75 mb-3">
+  <div class="card-body">
+    <h5 class="card-title"> <%=  @flat.name %></h5>
+    <p class="card-text"><%= @flat.address %></p>
+  </div>
+</div>
+
+<div class="card w-75 mb-3">
+  <div class="card-body">
+    <h5 class="card-title">A bit more about this flat... </h5>
+    <p class="card-text"><%= @flat.description %></p>
+  </div>
+</div>
+
+<div class="card w-75 mb-3">
+  <div class="card-body">
+   <i class="fa-solid fa-euro-sign"></i> <%= @flat.price_per_night %>
+   <i class="fa-solid fa-people-line"></i><%= @flat.number_of_guests %>
+  </div>
+</div>
+
+
+</div>
+
+
+<div>
+  <%= link_to "Edit this flat", edit_flat_path(@flat) %> |
+  <%= link_to "Back to flats", flats_path %>
+
+  <%= button_to "Destroy this flat", @flat, method: :delete %>
+</div>

@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+ .flexbox {
+  display: flex;
+}
+
+.cards {
+  flex-grow: 1;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
